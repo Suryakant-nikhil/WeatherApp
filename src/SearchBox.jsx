@@ -11,12 +11,15 @@ const SearchBox = ({updateInfo}) => {
 
     // const apiUrl = process.env.API_URL;
     // const apikey = process.env.API_KEY;
+
+    const API_URL="https://api.openweathermap.org/data/2.5/weather";
+    const API_KEY="8a4c41e0895ccefa83d820103caf7b8e";
     
 
     let getWeatherInfo= async()=>{
 
         try{
-            let response=  await fetch(`${process.env.API_URL}?q=${city}&appid=${process.env.API_KEY}&units=metric`);
+            let response=  await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
       let jsonresponse=await response.json();
       console.log(jsonresponse);
 
